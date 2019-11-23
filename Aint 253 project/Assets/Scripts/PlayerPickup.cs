@@ -17,5 +17,6 @@ public class PlayerPickup : MonoBehaviour
     {
         this.transform.parent = null;
         GetComponent<Rigidbody>().useGravity = true;
+        new Vector3(0,0,0);
     }
 }

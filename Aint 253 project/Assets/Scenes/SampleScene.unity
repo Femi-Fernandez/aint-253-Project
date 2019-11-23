@@ -473,7 +473,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &408684070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -483,14 +483,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 408684069}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b43f11bb8382d6e409ad34876416f0fa, type: 3}
+  m_Script: {fileID: 11500000, guid: 1fcbe58ac5ce6cc4d9b66af713ec8520, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button_1_count: 0
-  button_2_count: 0
-  button_3_count: 0
-  puzzleComplete: 0
-  puzzleCompleteText: {fileID: 2017007663}
 --- !u!65 &408684071
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -766,13 +761,14 @@ GameObject:
   - component: {fileID: 665814161}
   - component: {fileID: 665814160}
   - component: {fileID: 665814159}
+  - component: {fileID: 665814165}
   m_Layer: 0
   m_Name: Shape 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &665814159
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -795,9 +791,9 @@ Rigidbody:
   m_GameObject: {fileID: 665814158}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 10
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -875,6 +871,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &665814165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 665814158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 831a75d18c4313d429bec833cbd6edd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PanelPress:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 408684070}
+        m_MethodName: panel2Pressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &679012336
 GameObject:
   m_ObjectHideFlags: 0
@@ -1842,8 +1866,8 @@ MonoBehaviour:
   ButtonPress:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 679012341}
-        m_MethodName: puzzleCompleteCheck
+      - m_Target: {fileID: 408684070}
+        m_MethodName: puzzleCheck
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1994,13 +2018,14 @@ GameObject:
   - component: {fileID: 1137656090}
   - component: {fileID: 1137656089}
   - component: {fileID: 1137656088}
+  - component: {fileID: 1137656094}
   m_Layer: 0
   m_Name: Shape 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1137656088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2023,9 +2048,9 @@ Rigidbody:
   m_GameObject: {fileID: 1137656087}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 10
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -2037,7 +2062,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1137656087}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 5103d547cc9d9cb4785de879b07345df, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -2097,12 +2122,40 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1137656087}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.3, y: 1.31, z: -8.21}
+  m_LocalPosition: {x: 3.363, y: 0.381, z: -9.357}
   m_LocalScale: {x: 0.2861, y: 0.2861, z: 0.2861}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1137656094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1137656087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64c63e1ce813fbc4f8e7b5829764e18a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PanelPress:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 408684070}
+        m_MethodName: panel3Pressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1137846746
 GameObject:
   m_ObjectHideFlags: 0
@@ -2479,7 +2532,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1590423957}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 5103d547cc9d9cb4785de879b07345df, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -2661,7 +2714,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1697103402}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 2.163}
+  m_LocalPosition: {x: 0, y: 0, z: 1.027}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2037604625}
@@ -2965,13 +3018,14 @@ GameObject:
   - component: {fileID: 1754774192}
   - component: {fileID: 1754774191}
   - component: {fileID: 1754774190}
+  - component: {fileID: 1754774196}
   m_Layer: 0
   m_Name: Shape 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1754774190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2993,10 +3047,10 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1754774189}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
+  m_Mass: 10
+  m_Drag: 10
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -3068,12 +3122,40 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1754774189}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.02, y: 0.44, z: -9.43}
+  m_LocalPosition: {x: 2.355, y: 1.337, z: -8.231}
   m_LocalScale: {x: 0.2861, y: 0.2861, z: 0.2861}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1754774196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1754774189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51e255267b683b8478d3e92029c38579, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PanelPress:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 408684070}
+        m_MethodName: panel1Pressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1950772810
 GameObject:
   m_ObjectHideFlags: 0
@@ -3740,8 +3822,6 @@ GameObject:
   - component: {fileID: 2145943515}
   - component: {fileID: 2145943514}
   - component: {fileID: 2145943513}
-  - component: {fileID: 2145943517}
-  - component: {fileID: 2145943516}
   m_Layer: 0
   m_Name: Sphere (9)
   m_TagString: Untagged
@@ -3822,32 +3902,3 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2145943511}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &2145943516
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2145943511}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5fe888865b05794c9713acba631d512, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  theDest: {fileID: 1697103403}
---- !u!54 &2145943517
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2145943511}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
