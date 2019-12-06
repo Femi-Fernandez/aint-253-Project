@@ -5,14 +5,19 @@ using UnityEngine;
 public class Puzzle2main : MonoBehaviour
 {
 
-    private bool panel1Press = false;
-    private bool panel2Press = false;
-    private bool panel3Press = false;
-    private bool puzzle2Complete = false;
+    public bool panel1Press = false;
+    public bool panel2Press = false;
+    public bool panel3Press = false;
+    public bool puzzle2Complete = false;
+
+    //public GameObject hole1;
+    //public GameObject hole2;
+    //public GameObject hole3;
     // Start is called before the first frame update
     void Start()
     {
-        
+
+
     }
 
     // Update is called once per frame
@@ -24,14 +29,15 @@ public class Puzzle2main : MonoBehaviour
     public void panel1Pressed()
     {
         panel1Press = true;
+        Debug.Log("boom");
     }
     public void panel2Pressed()
     {
-        panel2Press = true;
+        panel2Press = true;        
     }
     public void panel3Pressed()
     {
-        panel3Press = true;
+        panel3Press = true;        
     }
     
     public void puzzleCheck()
