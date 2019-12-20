@@ -6,12 +6,18 @@ public class PlayerMovement : MonoBehaviour
 {
 
     public float speed = 6.0f;
-    public float gravity = -9f;
-    private CharacterController _charCont;
+    public float gravity = 5f;
+    public float jumpSpeed = 0f;
+    private CharacterController charCont;
+
+    private Vector3 movement;
+
+
     // Start is called before the first frame update
     void Start()
     {
-        _charCont = GetComponent<CharacterController>();
+        charCont = GetComponent<CharacterController>();
+
     }
 
     // Update is called once per frame
@@ -19,12 +25,22 @@ public class PlayerMovement : MonoBehaviour
     {
         float deltaX = Input.GetAxis("Horizontal") * speed;
         float deltaZ = Input.GetAxis("Vertical") * speed;
-        Vector3 movement = new Vector3(deltaX, 0, deltaZ);
-        movement = Vector3.ClampMagnitude(movement, speed);
-        movement.y = gravity;
 
-        movement *= Time.deltaTime;
-        movement = transform.TransformDirection(movement);
-        _charCont.Move(movement);
+        if (charCont.isGrounded)
+        {
+            movement = new Vector3(deltaX, 0, deltaZ);
+            movement = Vector3.ClampMagnitude(movement, speed);
+            movement = transform.TransformDirection(movement);
+
+            if (Input.GetButtonDown("Jump"))
+                {
+                    movement.y = jumpSpeed;
+                    //Debug.Log("here");
+                }
+
         }
+
+        movement.y -= gravity;
+        charCont.Move(movement *Time.deltaTime);
+    }
 }
