@@ -5,9 +5,9 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 
-    public float speed = 6.0f;
-    public float gravity = 5f;
-    public float jumpSpeed = 0f;
+    private float speed = 6.0f;
+    private float gravity = -9f;
+    private float jumpSpeed = 10f;
     private CharacterController charCont;
 
     private Vector3 movement;
@@ -25,22 +25,36 @@ public class PlayerMovement : MonoBehaviour
     {
         float deltaX = Input.GetAxis("Horizontal") * speed;
         float deltaZ = Input.GetAxis("Vertical") * speed;
+        Vector3 movement = new Vector3(deltaX, 0, deltaZ);
+        movement = Vector3.ClampMagnitude(movement, speed);
+        movement.y = gravity;
 
-        if (charCont.isGrounded)
+        movement *= Time.deltaTime;
+        movement = transform.TransformDirection(movement);
+        charCont.Move(movement);
+
+        if (charCont.isGrounded == true && charCont.velocity.magnitude > 3 && GetComponent<AudioSource>().isPlaying == false)
         {
-            movement = new Vector3(deltaX, 0, deltaZ);
-            movement = Vector3.ClampMagnitude(movement, speed);
-            movement = transform.TransformDirection(movement);
-
-            if (Input.GetButtonDown("Jump"))
-                {
-                    movement.y = jumpSpeed;
-                    //Debug.Log("here");
-                }
-
+            GetComponent<AudioSource>().Play();
         }
-
-        movement.y -= gravity;
-        charCont.Move(movement *Time.deltaTime);
     }
+
+        //float deltaX = Input.GetAxis("Horizontal") * speed;
+        //float deltaZ = Input.GetAxis("Vertical") * speed;
+        //
+        //    movement = new Vector3(deltaX, 0, deltaZ);
+        //    movement = Vector3.ClampMagnitude(movement, speed);
+        //    movement = transform.TransformDirection(movement);
+        //
+        //
+        //    //if (Input.GetButtonDown("Jump"))
+        //    //{
+        //    //    movement.y = jumpSpeed;
+        //    //    //Debug.Log("here");
+        //    //}
+        //
+        //movement.y -= gravity;
+        //
+        //charCont.Move(movement * Time.deltaTime);
+    
 }

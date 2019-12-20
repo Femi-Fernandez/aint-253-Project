@@ -32,8 +32,6 @@ public class PlayerViewNote : MonoBehaviour
             note1.GetComponent<Animator>().Play("Note_1_return");
             notenumber = 0;
             StartCoroutine(toggleBool(notenumber));
-            //noteText.text = "";
-            //Debug.Log("here 2 ");
 
         }
     }
