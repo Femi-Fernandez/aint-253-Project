@@ -9,6 +9,6 @@ public class ButtonPressEvent : MonoBehaviour
     public void HitByRay()
     {
         ButtonPress.Invoke();
-        Debug.Log("Ouch");
+        //Debug.Log("Ouch");
     }
 }

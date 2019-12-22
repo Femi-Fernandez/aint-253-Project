@@ -6,12 +6,11 @@ public class PlayerMovement : MonoBehaviour
 {
 
     private float speed = 6.0f;
-    private float gravity = -9f;
-    private float jumpSpeed = 10f;
+    private float gravity = 20f;
+    private float jumpSpeed = 8f;
+
     private CharacterController charCont;
-
-    private Vector3 movement;
-
+    private Vector3 moveDirection = Vector3.zero;
 
     // Start is called before the first frame update
     void Start()
@@ -23,21 +22,50 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float deltaX = Input.GetAxis("Horizontal") * speed;
-        float deltaZ = Input.GetAxis("Vertical") * speed;
-        Vector3 movement = new Vector3(deltaX, 0, deltaZ);
-        movement = Vector3.ClampMagnitude(movement, speed);
-        movement.y = gravity;
-
-        movement *= Time.deltaTime;
-        movement = transform.TransformDirection(movement);
-        charCont.Move(movement);
-
-        if (charCont.isGrounded == true && charCont.velocity.magnitude > 3 && GetComponent<AudioSource>().isPlaying == false)
+        if (charCont.isGrounded)
         {
-            GetComponent<AudioSource>().Play();
+
+
+            moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+            moveDirection = transform.TransformDirection(moveDirection);
+            moveDirection *= speed;
+
+            if (Input.GetButtonDown("Jump"))
+            {
+                moveDirection.y = jumpSpeed;
+                //Debug.Log("here");
+            }
+            if (charCont.velocity.magnitude > 3 && GetComponent<AudioSource>().isPlaying == false)
+            {
+                GetComponent<AudioSource>().Play();
+            }
         }
+        moveDirection.y -= gravity * Time.deltaTime;
+        charCont.Move(moveDirection*Time.deltaTime);
     }
+        //float deltaX = Input.GetAxis("Horizontal") * speed;
+        //float deltaZ = Input.GetAxis("Vertical") * speed;
+        //Vector3 movement = new Vector3(deltaX, 0, deltaZ);
+        //movement = Vector3.ClampMagnitude(movement, speed);
+        //
+        //
+        //if (charCont.isGrounded)
+        //{
+        //    if (Input.GetButtonDown("Jump"))
+        //    {
+        //        movement.y = jumpSpeed;
+        //        //Debug.Log("here");
+        //    }
+        //}
+        //movement.y = gravity * Time.deltaTime;
+        //movement = transform.TransformDirection(movement);
+        //charCont.Move(movement *  Time.deltaTime);
+        //
+        //if (charCont.isGrounded == true && charCont.velocity.magnitude > 3 && GetComponent<AudioSource>().isPlaying == false)
+        //{
+        //    GetComponent<AudioSource>().Play();
+        //}
+    
 
         //float deltaX = Input.GetAxis("Horizontal") * speed;
         //float deltaZ = Input.GetAxis("Vertical") * speed;

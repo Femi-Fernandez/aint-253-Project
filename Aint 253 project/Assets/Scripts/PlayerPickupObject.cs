@@ -32,7 +32,7 @@ public class PlayerPickupObject : MonoBehaviour
     {
         carrying = false;
         carriedObject.GetComponent<Rigidbody>().isKinematic = false;
-        //carriedObject.GetComponent<Rigidbody>().useGravity = true;
+        carriedObject.GetComponent<Rigidbody>().useGravity = true;
         carriedObject = null;   
     }
 

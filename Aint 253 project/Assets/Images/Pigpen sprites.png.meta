@@ -1,0 +1,559 @@
+fileFormatVersion: 2
+guid: 7e0bb8640d7644d4e8b77b19bd68980b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -979823483318445612
+    second: Pigpen sprites_0
+  - first:
+      213: -5194017317645290832
+    second: Pigpen sprites_1
+  - first:
+      213: 2470868667660043521
+    second: Pigpen sprites_2
+  - first:
+      213: -7435059934214691604
+    second: Pigpen sprites_3
+  - first:
+      213: -2703674130434668366
+    second: Pigpen sprites_4
+  - first:
+      213: -1185620607251605575
+    second: Pigpen sprites_5
+  - first:
+      213: -315011182888017335
+    second: Pigpen sprites_6
+  - first:
+      213: 1533889297851743712
+    second: Pigpen sprites_7
+  - first:
+      213: -7442980829544599745
+    second: Pigpen sprites_8
+  - first:
+      213: -2950904567805558696
+    second: Pigpen sprites_9
+  - first:
+      213: 3054728664436680187
+    second: Pigpen sprites_10
+  - first:
+      213: -930906180326901995
+    second: Pigpen sprites_11
+  - first:
+      213: -4688907558476821889
+    second: Pigpen sprites_12
+  - first:
+      213: -7214832838466530221
+    second: Pigpen sprites_13
+  - first:
+      213: -1170175044280288639
+    second: Pigpen sprites_14
+  - first:
+      213: -731460396011733651
+    second: Pigpen sprites_15
+  - first:
+      213: 5899701639646432013
+    second: Pigpen sprites_16
+  - first:
+      213: 8683511402382460387
+    second: Pigpen sprites_17
+  - first:
+      213: 8520515518716343806
+    second: Pigpen sprites_18
+  - first:
+      213: -143238227819424913
+    second: Pigpen sprites_19
+  - first:
+      213: 5256193681152920647
+    second: Pigpen sprites_20
+  - first:
+      213: 6490186295739928348
+    second: Pigpen sprites_21
+  - first:
+      213: -2761696388879455509
+    second: Pigpen sprites_22
+  - first:
+      213: -5402473713459011159
+    second: Pigpen sprites_23
+  - first:
+      213: 3464465196255578984
+    second: Pigpen sprites_24
+  - first:
+      213: -9170030690580694638
+    second: Pigpen sprites_25
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Pigpen sprites_0
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 988
+        width: 160
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 255756b5ab7b1824db195ffd500ea04a
+      internalID: -979823483318445612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigpen sprites_1
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 987
+        width: 164
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46d9caacc344c7e428dedbb21314c2b0
+      internalID: -5194017317645290832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigpen sprites_2
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 986
+        width: 165
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c30dfe38aa1c8947bcd030b77d7b81a
+      internalID: 2470868667660043521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigpen sprites_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 832
+        width: 162
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fcaf42a3785b4442b25a66d016b01f5
+      internalID: -7435059934214691604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigpen sprites_4
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 832
+        width: 165
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1215e38729b1d014ab4e2c98b96d3f28
+      internalID: -2703674130434668366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigpen sprites_5
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 832
+        width: 159
+        height: 164
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cab9c3866035294aad0f97d1ada60f6
+      internalID: -1185620607251605575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigpen sprites_6
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 678
+        width: 158
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90d2f47c9c467e842a8f301ba56e2cf4
+      internalID: -315011182888017335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigpen sprites_7
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 678
+        width: 164
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e752d0e0630919043a23744bd6c5888b
+      internalID: 1533889297851743712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigpen sprites_8
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 678
+        width: 163
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: beb0dbc10aa23cb4ea95afee71af09be
+      internalID: -7442980829544599745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigpen sprites_9
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 988
+        width: 157
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df283672d0959a64194fbc311f777dfb
+      internalID: -2950904567805558696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigpen sprites_10
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 988
+        width: 163
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 220efe02b280a3948b9bcffe7fa0e793
+      internalID: 3054728664436680187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigpen sprites_11
+      rect:
+        serializedVersion: 2
+        x: 987
+        y: 988
+        width: 164
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ec50a969475efb44aeb8a54e6dcb4c8
+      internalID: -930906180326901995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigpen sprites_12
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 833
+        width: 161
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 448b93749c375c64aa574a8f89adc8a5
+      internalID: -4688907558476821889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigpen sprites_13
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 832
+        width: 164
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d86e73d9600d57541b2248b55e49669c
+      internalID: -7214832838466530221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigpen sprites_14
+      rect:
+        serializedVersion: 2
+        x: 987
+        y: 830
+        width: 162
+        height: 164
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c5559062686f6e438f35d8c24a10ed3
+      internalID: -1170175044280288639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigpen sprites_15
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 678
+        width: 156
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc96f54bdf503ff4dab123c198c423d9
+      internalID: -731460396011733651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigpen sprites_16
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 678
+        width: 163
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eb43ca49c9fbc349ace31afeb31b3fa
+      internalID: 5899701639646432013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigpen sprites_17
+      rect:
+        serializedVersion: 2
+        x: 987
+        y: 678
+        width: 163
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9b60fab980b3b445956d9ff693008d0
+      internalID: 8683511402382460387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
