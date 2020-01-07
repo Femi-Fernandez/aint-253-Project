@@ -17,6 +17,10 @@ public class Puzzle3main : MonoBehaviour
     public GameObject display10;
     public GameObject display11;
 
+
+    public AudioClip puzzle_complete;
+    public AudioClip puzzle_incorrect;
+    public AudioSource audioClips;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +42,11 @@ public class Puzzle3main : MonoBehaviour
             && (display11.GetComponent<Puzzle3ChangeLetter>().letterCount == 4))
         {
             puzzle3Complete = true;
+            audioClips.PlayOneShot(puzzle_complete, .5f);
+        }
+        else
+        {
+            audioClips.PlayOneShot(puzzle_incorrect, .5f);
         }
     }
 }

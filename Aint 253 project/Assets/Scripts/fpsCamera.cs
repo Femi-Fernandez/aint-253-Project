@@ -19,6 +19,11 @@ public class fpsCamera : MonoBehaviour
     public float sensVerticle = 10.0f;
 
     public float _rotationX = 0;
+
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+    }
     // Update is called once per frame
     void Update()
     {

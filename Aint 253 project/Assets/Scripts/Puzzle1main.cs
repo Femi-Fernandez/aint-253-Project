@@ -11,6 +11,10 @@ public class Puzzle1main : MonoBehaviour
     public bool puzzleComplete = false;
     public Text puzzleCompleteText;
 
+    public AudioClip puzzle_complete;
+    public AudioClip puzzle_incorrect;
+    public AudioSource audioClips;
+
     private void Start()
     {
         puzzleCompleteText.text = "";
@@ -33,10 +37,12 @@ public class Puzzle1main : MonoBehaviour
         if ((button_1_count == 2)&&(button_2_count == 3)&&(button_3_count==5))
         {
             puzzleComplete = true;
-            puzzleCompleteText.text = "Puzzle complete!";
+            audioClips.PlayOneShot(puzzle_complete, .5f);
+            //puzzleCompleteText.text = "Puzzle complete!";
         }
         else
         {
+            audioClips.PlayOneShot(puzzle_incorrect, .5f);
             button_1_count = 0;
             button_2_count = 0;
             button_3_count = 0;

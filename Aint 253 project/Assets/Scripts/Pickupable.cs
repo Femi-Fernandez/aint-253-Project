@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class Pickupable : MonoBehaviour
 {
+    public AudioClip objectPickup;
+    public AudioClip objectDrop;
+    public AudioSource audioClips;
     // Start is called before the first frame update
-    void Start()
+
+    private void Start()
     {
         
     }
-
-    // Update is called once per frame
-    void Update()
+    public void playPickup() {
+        audioClips.PlayOneShot(objectPickup, 1);
+    }
+    public void playDrop()
     {
-        
+        audioClips.PlayOneShot(objectDrop, 1);
     }
 }

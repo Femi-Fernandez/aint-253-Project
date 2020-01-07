@@ -10,9 +10,12 @@ public class Puzzle2main : MonoBehaviour
     public bool panel3Press = false;
     public bool puzzle2Complete = false;
 
-    //public GameObject hole1;
-    //public GameObject hole2;
-    //public GameObject hole3;
+    public AudioClip shape1;
+    public AudioClip shape2;
+    public AudioClip shape3;
+
+    public AudioClip puzzle_complete;
+    public AudioSource audioClips;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,15 +32,18 @@ public class Puzzle2main : MonoBehaviour
     public void panel1Pressed()
     {
         panel1Press = true;
-        Debug.Log("boom");
+        audioClips.PlayOneShot(shape1, .5f);
+        //Debug.Log("boom");
     }
     public void panel2Pressed()
     {
-        panel2Press = true;        
+        panel2Press = true;
+        audioClips.PlayOneShot(shape2, .5f);
     }
     public void panel3Pressed()
     {
-        panel3Press = true;        
+        panel3Press = true;
+        audioClips.PlayOneShot(shape3, .5f);
     }
     
     public void puzzleCheck()
@@ -45,6 +51,7 @@ public class Puzzle2main : MonoBehaviour
         if ((panel1Press = true)&&(panel2Press = true)&&(panel3Press = true))
         {
             puzzle2Complete = true;
+            audioClips.PlayOneShot(puzzle_complete, .5f);
             Debug.Log("puzzle 2 complete!");
         }
      

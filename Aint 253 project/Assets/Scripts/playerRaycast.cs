@@ -21,7 +21,7 @@ public class playerRaycast : MonoBehaviour
         if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
         {
             //Debug.Log(hit.transform.name);
-            hit.transform.SendMessage("HitByRay");
+            hit.transform.SendMessage("HitByRay", SendMessageOptions.DontRequireReceiver);
         }
     }
 }

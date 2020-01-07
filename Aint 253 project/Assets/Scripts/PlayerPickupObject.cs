@@ -35,7 +35,9 @@ public class PlayerPickupObject : MonoBehaviour
         carrying = false;
         carriedObject.GetComponent<Rigidbody>().isKinematic = false;
         carriedObject.GetComponent<Rigidbody>().useGravity = true;
-        carriedObject = null;   
+        carriedObject.GetComponent<Pickupable>().playDrop();
+        carriedObject = null;
+        
     }
 
     void checkDrop()
@@ -62,6 +64,7 @@ public class PlayerPickupObject : MonoBehaviour
                 RaycastHit hit;
                 if (Physics.Raycast(mainCamera.transform.position, mainCamera.transform.forward, out hit, 20f))
                 {
+
                     Debug.Log(hit.transform.name);
                     Pickupable p = hit.collider.GetComponent<Pickupable>();
                     if (p != null)
@@ -70,6 +73,7 @@ public class PlayerPickupObject : MonoBehaviour
                         carrying = true;
                         p.GetComponent<Rigidbody>().isKinematic = true;
                         p.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+                        p.playPickup();
                     }
                 }
             }

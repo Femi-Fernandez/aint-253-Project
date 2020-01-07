@@ -23,6 +23,8 @@ public class PlayerViewNote : MonoBehaviour
     public GameObject puzzle3;
 
     public bool isPlaying;
+    public AudioClip viewNote;
+    public AudioSource audioClips;
     // Start is called before the first frame update
     void Start()
     {
@@ -53,6 +55,7 @@ public class PlayerViewNote : MonoBehaviour
                 note1.GetComponent<Animator>().Play("Note_1_view");
                 notenumber = 1;
                 isPlaying = true;
+                audioClips.PlayOneShot(viewNote, .5f);
                 StartCoroutine(toggleBool(notenumber));
             }
 
@@ -61,6 +64,7 @@ public class PlayerViewNote : MonoBehaviour
                 note1.GetComponent<Animator>().Play("Note_1_return");
                 notenumber = 0;
                 isPlaying = true;
+                audioClips.PlayOneShot(viewNote, .5f);
                 StartCoroutine(toggleBool(notenumber));
             }
         }
@@ -74,6 +78,7 @@ public class PlayerViewNote : MonoBehaviour
                 note2.GetComponent<Animator>().Play("Note_2_view");
                 notenumber = 2;
                 isPlaying = true;
+                audioClips.PlayOneShot(viewNote, .5f);
                 StartCoroutine(toggleBool(notenumber));
             }
             if ((Input.GetKeyDown("2")) && isPlaying == false && (!viewingNote1 && viewingNote2 && !viewingNote3))
@@ -81,6 +86,7 @@ public class PlayerViewNote : MonoBehaviour
                 note2.GetComponent<Animator>().Play("Note_2_return");
                 notenumber = 0;
                 isPlaying = true;
+                audioClips.PlayOneShot(viewNote, .5f);
                 StartCoroutine(toggleBool(notenumber));
             }
         }
@@ -95,6 +101,7 @@ public class PlayerViewNote : MonoBehaviour
                 note3.GetComponent<Animator>().Play("Note_3_view");
                 notenumber = 3;
                 isPlaying = true;
+                audioClips.PlayOneShot(viewNote, .5f);
                 StartCoroutine(toggleBool(notenumber));
             }
             if ((Input.GetKeyDown("3")) && isPlaying == false && (!viewingNote1 && !viewingNote2 && viewingNote3))
@@ -102,6 +109,7 @@ public class PlayerViewNote : MonoBehaviour
                 note3.GetComponent<Animator>().Play("Note_3_return");
                 notenumber = 0;
                 isPlaying = true;
+                audioClips.PlayOneShot(viewNote, .5f);
                 StartCoroutine(toggleBool(notenumber));
             }
         }
