@@ -144,19 +144,19 @@ public class PlayerViewNote : MonoBehaviour
         {
             viewingNote1 = !viewingNote1;
             isPlaying = false;
-            noteText.text = "note goes here, blah blah blah, note goes here, blah blah blah, note goes here, blah blah blah, note goes here, blah blah blah, note goes here, blah blah blah, note goes here, blah blah blah, note goes here, blah blah blah, note goes here, blah blah blah, note goes here, blah blah blah, note goes here, blah blah blah, note goes here, blah blah blah, ";
+            noteText.text = "You may now use both your arms. Use them wisely. (press right mouse button to pick up certian objects)";
         }
         if (notenum == 2)
         {
             viewingNote2 = !viewingNote2;
             isPlaying = false;
-            noteText.text = "THIS IS NOTWE 2 THIS IS NOTWE 2 THIS IS NOTWE 2 THIS IS NOTWE 2 THIS IS NOTWE 2 THIS IS NOTWE 2 THIS IS NOTWE 2 THIS IS NOTWE 2 THIS IS NOTWE 2 THIS IS NOTWE 2 THIS IS NOTWE 2 THIS IS NOTWE 2 THIS IS NOTWE 2 THIS IS NOTWE 2   ";
+            noteText.text = "Well done, you may now use your legs. You may be able to access areas you previously couldnt. (press space to jump)";
         }
         if (notenum == 3)
         {
             viewingNote3 = !viewingNote3;
             isPlaying = false;
-            noteText.text = "NOTE 3 NOTE 3 NOTE 3 NOTE 3 NOTE 3 NOTE 3  NOTE 3 NOTE 3 NOTE 3  NOTE 3 NOTE 3 NOTE 3  NOTE 3 NOTE 3 NOTE 3  NOTE 3 NOTE 3 NOTE 3  NOTE 3 NOTE 3 NOTE 3  NOTE 3 NOTE 3 NOTE 3  NOTE 3 NOTE 3 NOTE 3  NOTE 3 NOTE 3 NOTE 3  NOTE 3 NOTE 3 NOTE 3";
+            noteText.text = "You have successfully completed all the puzzles set before you. You may now leave";
         }
     }
 }

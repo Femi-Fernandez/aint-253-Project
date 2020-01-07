@@ -20,9 +20,13 @@ public class fpsCamera : MonoBehaviour
 
     public float _rotationX = 0;
 
+
+    public bool mouselocked;
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        mouselocked = true;
     }
     // Update is called once per frame
     void Update()
@@ -40,9 +44,19 @@ public class fpsCamera : MonoBehaviour
             transform.localEulerAngles = new Vector3(_rotationX, rotationY, 0);
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && mouselocked == true)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            mouselocked = false;
+            Debug.Log("unlock");
+        }
+        else if (Input.GetKeyDown(KeyCode.Escape) && mouselocked == false)
         {
             Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+            mouselocked = true;
+            Debug.Log("lock");
         }
 
     }
