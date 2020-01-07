@@ -9,6 +9,8 @@ public class PlayerPickupObject : MonoBehaviour
     public float distance;
     public float smooth;
     GameObject carriedObject;
+
+    public GameObject puzzle1;
     // Start is called before the first frame update
     void Start()
     {
@@ -53,22 +55,26 @@ public class PlayerPickupObject : MonoBehaviour
 
     void pickup()
     {
-        if (Input.GetButtonDown("Fire2"))
+        if (puzzle1.GetComponent<Puzzle1main>().puzzleComplete == true)
         {
-            RaycastHit hit;
-            if (Physics.Raycast(mainCamera.transform.position, mainCamera.transform.forward, out hit, 20f))
+            if (Input.GetButtonDown("Fire2"))
             {
-                Debug.Log(hit.transform.name);
-                Pickupable p = hit.collider.GetComponent<Pickupable>();
-                if (p != null)
+                RaycastHit hit;
+                if (Physics.Raycast(mainCamera.transform.position, mainCamera.transform.forward, out hit, 20f))
                 {
-                    carriedObject = p.gameObject;
-                    carrying = true;                  
-                    p.GetComponent<Rigidbody>().isKinematic = true;
-                    p.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+                    Debug.Log(hit.transform.name);
+                    Pickupable p = hit.collider.GetComponent<Pickupable>();
+                    if (p != null)
+                    {
+                        carriedObject = p.gameObject;
+                        carrying = true;
+                        p.GetComponent<Rigidbody>().isKinematic = true;
+                        p.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+                    }
                 }
             }
         }
+        
     }
     
 }

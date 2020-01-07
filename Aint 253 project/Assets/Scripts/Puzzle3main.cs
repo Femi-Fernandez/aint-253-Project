@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Puzzle3main : MonoBehaviour
 {
-    public bool iscomplete = false;
+    public bool puzzle3Complete = false;
     public GameObject display1;
     public GameObject display2;
     public GameObject display3;
@@ -37,7 +37,7 @@ public class Puzzle3main : MonoBehaviour
             && (display10.GetComponent<Puzzle3ChangeLetter>().letterCount == 21)
             && (display11.GetComponent<Puzzle3ChangeLetter>().letterCount == 4))
         {
-            iscomplete = true;
+            puzzle3Complete = true;
         }
     }
 }

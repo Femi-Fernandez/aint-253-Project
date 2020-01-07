@@ -10,6 +10,9 @@ public class PlayerMovement : MonoBehaviour
     private float jumpSpeed = 8f;
 
     private CharacterController charCont;
+
+    public GameObject puzzle2;
+    
     private Vector3 moveDirection = Vector3.zero;
 
     // Start is called before the first frame update
@@ -30,11 +33,16 @@ public class PlayerMovement : MonoBehaviour
             moveDirection = transform.TransformDirection(moveDirection);
             moveDirection *= speed;
 
-            if (Input.GetButtonDown("Jump"))
+            if (puzzle2.GetComponent<Puzzle2main>().puzzle2Complete == true)
             {
-                moveDirection.y = jumpSpeed;
-                //Debug.Log("here");
+                if (Input.GetButtonDown("Jump"))
+                {
+                    moveDirection.y = jumpSpeed;
+                    //Debug.Log("here");
+                }
+
             }
+            
             if (charCont.velocity.magnitude > 3 && GetComponent<AudioSource>().isPlaying == false)
             {
                 GetComponent<AudioSource>().Play();
